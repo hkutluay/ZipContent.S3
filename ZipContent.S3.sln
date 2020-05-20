@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30104.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZipContent.S3", "ZipContent.S3\ZipContent.S3.csproj", "{090EA526-CBC9-4AF8-BD1B-C10B549BC2FC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZipContent.S3.Test", "ZipContent.S3.Test\ZipContent.S3.Test.csproj", "{FD32FD81-FAAD-442D-9046-67FD641CEE8A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{090EA526-CBC9-4AF8-BD1B-C10B549BC2FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{090EA526-CBC9-4AF8-BD1B-C10B549BC2FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{090EA526-CBC9-4AF8-BD1B-C10B549BC2FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{090EA526-CBC9-4AF8-BD1B-C10B549BC2FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD32FD81-FAAD-442D-9046-67FD641CEE8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD32FD81-FAAD-442D-9046-67FD641CEE8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD32FD81-FAAD-442D-9046-67FD641CEE8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD32FD81-FAAD-442D-9046-67FD641CEE8A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {678FD09D-F886-454B-80F8-32786F3080A4}
+	EndGlobalSection
+EndGlobal
