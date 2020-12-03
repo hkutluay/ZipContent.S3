@@ -22,7 +22,7 @@ IPartialFileReader partialReader = new S3PartialFileReader(s3, bucket, key);
 
 IZipContentLister lister = new ZipContentLister();
 
-var contentList = lister.GetContents(partialReader);
+var contentList = await lister.GetContents(partialReader);
 
 foreach (var content in contentList)
    Console.WriteLine(item.FullName);
