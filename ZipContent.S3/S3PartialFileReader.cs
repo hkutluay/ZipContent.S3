@@ -1,6 +1,7 @@
 ﻿using Amazon.S3;
 using Amazon.S3.Model;
 using System.IO;
+using System.Threading;
 using System.Threading.Tasks;
 using ZipContent.Core;
 
@@ -19,13 +20,13 @@ namespace ZipContent.S3
             _key = key;
         }
 
-        public async Task<long> ContentLength()
+        public async Task<long> ContentLength(CancellationToken cancellationToken = default)
         {
-            var metadata = await _s3.GetObjectMetadataAsync(_bucket, _key);
+            var metadata = await _s3.GetObjectMetadataAsync(_bucket, _key, cancellationToken);
             return metadata.ContentLength;
         }
 
-        public async Task<byte[]> GetBytes(Core.ByteRange range)
+        public async Task<byte[]> GetBytes(Core.ByteRange range, CancellationToken cancellationToken = default)
         {
             GetObjectRequest request = new GetObjectRequest
             {
@@ -33,7 +34,7 @@ namespace ZipContent.S3
                 Key = _key,
                 ByteRange = new Amazon.S3.Model.ByteRange(range.Start, range.End)
             };
-            var response = await _s3.GetObjectAsync(request);
+            var response = await _s3.GetObjectAsync(request, cancellationToken);
             return StreamToArray(response.ResponseStream);
         }
 
