@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netstandard1.6;netstandard2.1;netstandard2.0;</TargetFrameworks>
+    <TargetFrameworks>netstandard1.6;netstandard2.1;netstandard2.0;net5.0</TargetFrameworks>
     <Description>S3PartialFileReader for ZipContent.Core
 
 Lists zip file content on AWS S3 without downloading whole document. Supports both zip and zip64 files.</Description>
@@ -10,14 +10,14 @@ Lists zip file content on AWS S3 without downloading whole document. Supports bo
     <RepositoryUrl>https://github.com/hkutluay/ZipContent</RepositoryUrl>
     <PackageTags>zip list content AWS S3</PackageTags>
     <PackageIcon>s3_logo.png</PackageIcon>
-    <Version>1.1.0</Version>
-    <AssemblyVersion>1.1.0.0</AssemblyVersion>
-    <FileVersion>1.1.0.0</FileVersion>
+    <Version>1.2.0</Version>
+    <AssemblyVersion>1.2.0.0</AssemblyVersion>
+    <FileVersion>1.2.0.0</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="AWSSDK.S3" Version="3.3.110.71" />
-    <PackageReference Include="ZipContent.Core" Version="1.1.1" />
+    <PackageReference Include="ZipContent.Core" Version="1.2.0" />
   </ItemGroup>
 
   <ItemGroup>
