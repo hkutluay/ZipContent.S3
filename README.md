@@ -12,6 +12,24 @@ PM> Install-Package ZipContent.S3
 ```
 
 Sample usage:
+
+```csharp
+string bucket = "test";
+string key = "foo.zip";
+
+IAmazonS3 s3 = new AmazonS3Client();
+
+IPartialFileReader partialReader = new S3PartialFileReader(s3, bucket, key);
+
+IZipContentLister lister = new ZipContentLister(partialReader);
+
+var contentList = await lister.GetContents();
+
+foreach (var content in contentList)
+   Console.WriteLine(item.FullName);
+ ```
+
+Before 1.2.0 version:
 ```csharp
 string bucket = "test";
 string key = "foo.zip";
